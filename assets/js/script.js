@@ -32,3 +32,15 @@ $("textarea").each(function () {
       localStorage.setItem(time, text);
     }
   });
+
+var loadEvents = function (elementId) {
+  
+    elementId.forEach((element) => {
+        console.log(element);
+        let text = localStorage.getItem(parseInt(element.time));
+        console.log(text);
+        if (text) {
+        element.text.val(text);
+        }
+    });
+};
