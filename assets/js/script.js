@@ -17,7 +17,8 @@ $("textarea").each(function () {
       $(this).addClass("present");
     }
   });
-  
+
+// Saves text to local storage
   $("button.saveBtn").click(function (event, loadEvents) {
     event.preventDefault();
     // Local variables
@@ -33,6 +34,7 @@ $("textarea").each(function () {
     }
   });
 
+// Loads local storage
 var loadEvents = function (elementId) {
   
     elementId.forEach((element) => {
@@ -44,3 +46,18 @@ var loadEvents = function (elementId) {
         }
     });
 };
+
+// Fetches local storage items
+var fetchEvents = function () {
+    var array = [];
+    $("textarea").each(function (index, elem) {
+        array.push({
+         time: $(elem).attr("id"),
+         text: $(elem),
+     });
+    });
+    loadEvents(array);
+};
+
+
+fetchEvents();
