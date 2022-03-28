@@ -6,4 +6,5 @@ For the JavaScript section of the site there were issues getting local storage t
 
 ## Site
 You can find the site at: https://nikolasmazur.github.io/day-schedule/
-When deployed the site should look as follows: (currently no photo)
+When deployed the site should look as follows: 
+![Nikolas Mazur site image](./assets/images/day-scheduler.PNG)
